@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Payment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .payment-type-group {
+      margin-bottom: 10px;
+    }
+
+    .payment-type-group label {
+      margin-right: 15px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <form action="paymentsuccess.html" method="get">
+    <div class="form-group">
+      <label for="vehicleNumber">Vehicle Number:</label>
+      <input type="text" id="vehicleNumber" name="vehicleNumber" required>
+    </div>
+
+    <div class="form-group">
+      <label for="model">Model:</label>
+      <select id="model" name="model" required>
+        <option value="sedan">Sedan</option>
+        <option value="suv">SUV</option>
+        <option value="hatchback">Hatchback</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="color">Color:</label>
+      <select id="color" name="color" required>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="black">Black</option>
+        <option value="white">White</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" required>
+    </div>
+
+    <div class="form-group">
+      <label for="accountNumber">Account Number:</label>
+      <input type="text" id="accountNumber" name="accountNumber" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bankName">Bank Name:</label>
+      <input type="text" id="bankName" name="bankName" required>
+    </div>
+
+    <div class="payment-type-group">
+      <label>Payment Type:</label><br>
+      <label><input type="radio" name="paymentType" value="credit" required> Credit Card</label>
+      <label><input type="radio" name="paymentType" value="debit" required> Debit Card</label>
+      <label><input type="radio" name="paymentType" value="netbanking" required> Net Banking</label>
+    </div>
+
+    <div class="form-group">
+      <label for="cardType">Card Type:</label>
+      <select id="cardType" name="cardType">
+        <option value="visa">Visa</option>
+        <option value="mastercard">MasterCard</option>
+        <option value="amex">American Express</option>
+      </select>
+
+      <label for="cardNumber">Card Number:</label>
+      <input type="text" id="cardNumber" name="cardNumber">
+
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv">
+
+      <label for="payingAmount">Paying Amount:</label>
+      <input type="number" id="payingAmount" name="payingAmount">
+    </div>
+
+    <button type="submit">PAY</button>
+  </form>
+</body>
+</html>
